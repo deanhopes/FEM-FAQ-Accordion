@@ -253,4 +253,40 @@ body {
   margin-top: 0.625rem;
 }
 
+:root {
+  --hero-height-half: 6.125rem;
+  --hero-width-half: 8.3125rem;
+  --hero-top: calc(var(--hero-height-half) * -1);
+  --hero-left: calc(calc(50% - var(--hero-width-half)) - 0.9375rem);
+}
+
+.hero-wrapper {
+  position: relative;
+  height: 6.5rem;
+  width: 14.8125rem;
+  background-image: url(../../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 37.5rem) {
+  .hero-wrapper {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-size: auto 140%;
+    background-position: right;
+  }
+}
+@media (min-width: 59.75rem) {
+  .hero-wrapper {
+    max-width: 21.8125rem;
+  }
+}
+.hero-wrapper .hero {
+  margin-top: calc(-1 * calc(0.5rem + var(--hero-height-half)));
+}
+
 /*# sourceMappingURL=styles.css.map */

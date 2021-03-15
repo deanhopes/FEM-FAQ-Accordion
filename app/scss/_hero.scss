@@ -1,0 +1,34 @@
+:root {
+  --hero-height-half: #{toRem(98px)};
+  --hero-width-half: #{toRem(133px)};
+  --hero-top: calc(var(--hero-height-half) * -1);
+  --hero-left: calc(calc(50% - var(--hero-width-half)) - #{toRem(15px)});
+}
+
+.hero-wrapper {
+  position: relative;
+  height: toRem(104px);
+  width: toRem(237px);
+  background-image: url(../../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include breakpoint-up(small) {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-size: auto 140%;
+    background-position: right;
+  }
+
+  @include breakpoint-up(medium) {
+    max-width: toRem(349px);
+  }
+
+  .hero {
+    margin-top: calc(-1 * calc(#{toRem(8px)} + var(--hero-height-half)));
+  }
+}

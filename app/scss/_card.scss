@@ -2,3 +2,18 @@
   --card-width: #{toRem(327px)};
   --card-height: #{toRem(643px)};
 }
+
+.card {
+  border-radius: toRem(23px);
+  overflow: hidden;
+
+  background-color: white;
+
+  width: var(--card-width);
+  height: var(--card-height);
+
+  display: flex;
+  flex-flow: column nowrap;
+  box-shadow: #{toRem(0px)} #{toRem(50px)} #{toRem(50px)} #{toRem(-20px)}
+    rgba(53, 18, 122, 0.5);
+}

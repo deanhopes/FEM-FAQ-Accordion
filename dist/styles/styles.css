@@ -158,4 +158,20 @@ body {
   background-repeat: no-repeat;
 }
 
+:root {
+  --card-width: 20.4375rem;
+  --card-height: 40.1875rem;
+}
+
+.card {
+  border-radius: 1.4375rem;
+  overflow: hidden;
+  background-color: white;
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  flex-flow: column nowrap;
+  box-shadow: 0rem 3.125rem 3.125rem -1.25rem rgba(53, 18, 122, 0.5);
+}
+
 /*# sourceMappingURL=styles.css.map */

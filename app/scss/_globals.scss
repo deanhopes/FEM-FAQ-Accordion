@@ -23,9 +23,10 @@ body {
   justify-content: center;
   align-items: center;
 
-  // background-color: gray;
-  background-image: linear-gradient(to right, red, #f06d06);
+  background: linear-gradient(
+    to bottom,
+    $backgroundGradientSoftViolet,
+    $backgroundGradientSoftBlue
+  );
   background-repeat: no-repeat;
-  background-position-x: right 50vw, left 45vw;
-  background-position-y: bottom 40vh, top 44vh;
 }

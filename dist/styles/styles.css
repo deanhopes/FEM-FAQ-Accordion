@@ -150,28 +150,107 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: "Kumbh", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #af67e9, #6565e7);
-  background-repeat: no-repeat;
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+.container {
+  margin-top: calc(var(--hero-height-half) + 1.25rem);
+  margin-bottom: 3.125rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: white;
+  width: 20.625rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  padding: var(--hero-height-half) 1.5rem 0;
+  padding-top: 0px;
+  box-shadow: 0 1.25rem 1.875rem rgba(74, 75, 94, 0.7);
+}
+@media (min-width: 37.5rem) {
+  .container {
+    width: 41.875rem;
+    flex-flow: row nowrap;
+    padding: 0;
+    align-items: stretch;
+  }
+}
+@media (min-width: 59.75rem) {
+  .container {
+    flex-grow: 1;
+    max-width: 70%;
+    justify-content: space-between;
+  }
 }
 
 :root {
-  --card-width: 20.4375rem;
-  --card-height: 40.1875rem;
+  --t1: 300ms;
 }
 
-.card {
-  border-radius: 1.4375rem;
-  overflow: hidden;
-  background-color: white;
-  width: var(--card-width);
-  height: var(--card-height);
+.faq {
+  padding-top: 1.875rem;
+  color: #1d1e35;
+}
+@media (min-width: 37.5rem) {
+  .faq {
+    width: 55%;
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 69.6875rem) {
+  .faq {
+    padding-right: 6%;
+  }
+}
+.faq .title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #4a4b5e;
+}
+.faq .sections {
+  margin: 2.25rem 0;
+}
+.faq .sections .section {
+  border-bottom: 1px solid #e7e7e9;
+  padding: 1.25rem 0;
+  cursor: pointer;
+}
+.faq .sections .section:first-child {
+  padding-top: 0;
+}
+.faq .sections .section .question {
   display: flex;
-  flex-flow: column nowrap;
-  box-shadow: 0rem 3.125rem 3.125rem -1.25rem rgba(53, 18, 122, 0.5);
+  justify-content: space-between;
+  align-items: center;
+}
+.faq .sections .section .question::after {
+  content: url(../../images/icon-arrow-down.svg);
+  transition: var(--t1) linear;
+}
+.faq .sections .section .answer {
+  margin-top: 0;
+  line-height: 1.4em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--t1) ease-in-out, margin-top 300ms ease-in-out;
+}
+.faq .sections .expand > .question {
+  font-weight: 700;
+}
+.faq .sections .expand > .question::after {
+  transform: rotate(180deg);
+}
+.faq .sections :not(.expand) > .question:hover,
+.faq .sections :not(.expand):focus > .question {
+  color: #f47c57;
+}
+.faq .sections .expand > .answer {
+  margin-top: 0.625rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

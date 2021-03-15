@@ -1,0 +1,39 @@
+// === Width ===
+
+$width-mb: 23.4375rem; //375px
+$width-desk: 90rem; // 1440px;
+
+// === Fonts ===
+
+$font-xxxsm: 0.625rem; //10px
+$font-xxsm: 0.75rem; // 12px
+$font-xsm: 0.875rem; // 14px
+$font-sm: 1rem; // 16px
+$font-md: 1.125rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xlg: 1.5rem; // 24px
+$font-xxlg: 1.75rem; // 28px
+$font-xxxlg: 2.5rem; // 40px
+$font-xxxxlg: 3rem; // 48px
+$font-xxxxxlg: 4rem; // 60px
+
+// === Color ===
+
+// === Primary ===
+
+// -- Text --
+$primaryTextDarkBlue: hsl(238, 29%, 16%);
+$primaryTextSoftRed: hsl(14, 88%, 65%);
+
+// -- Gradient --
+$backgroundGradientSoftViolet: hsl(273, 75%, 66%);
+$backgroundGradientSoftBlue: hsl(240, 73%, 65%);
+
+// === Neutral ===
+
+// -- Text --
+$neutralTextVeryDarkGrayBlue: hsl(237, 12%, 33%);
+$neutralTextDarkGrayishBlue: hsl(237, 12%, 33%);
+
+// -- Dividers --
+$dividerLightGrayishBlue: hsl(240, 5%, 91%);
